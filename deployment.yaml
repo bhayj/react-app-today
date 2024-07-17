@@ -1,0 +1,22 @@
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: react-deployment
+  labels:
+    app: raam
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: raam
+  template:
+    metadata:
+      labels:
+        app: raam
+    spec:
+      containers:
+      - name: raam
+        image: bhayjeet96/frontend-reactjs:tag
+        ports:
+        - containerPort: 80

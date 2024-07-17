@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: multistage-docker-reactjs
+spec:
+  containers:
+  - name: multistage-docker-reactjs
+    image: multistage-docker-reactjs1  
+    ports:
+    - containerPort: 80
